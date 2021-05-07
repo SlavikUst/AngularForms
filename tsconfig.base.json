@@ -6,8 +6,9 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "downlevelIteration": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
@@ -16,5 +17,5 @@
       "es2018",
       "dom"
     ]
-  }
+  },
 }

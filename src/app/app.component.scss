@@ -1,0 +1,9 @@
+::ng-deep{
+  input{
+    font-size: 2em;
+
+    &.ng-invalid{
+      border: 2px solid red;
+    }
+  }
+}

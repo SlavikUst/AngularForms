@@ -1,0 +1,10 @@
+<section ngForm #templateForm="ngForm">
+  <input #name="ngModel" autocomplete="off" type="search" placeholder="Name" required minlength="5" [(ngModel)]="formData.name " name="name">
+  <input autocomplete="off"  [disabled]="true" type="search" placeholder="Last Name" minlength="50" [(ngModel)]="formData.lastName" name="lastName">
+  <input type="number" placeholder="Tel." [(ngModel)]="formData.tel" name="tel">
+  <input type="email" placeholder="Email"  [(ngModel)]="formData.nickName" name="email">
+</section>
+<!--{{formData | json}}<br/>-->
+<!--{{templateForm.form.value | json}}<br/>-->
+<!--{{templateForm.form.getRawValue() | json}}<br/>-->
+<!--<button (click)="setData()">setData</button>-->

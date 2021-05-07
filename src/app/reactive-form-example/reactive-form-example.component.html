@@ -1,0 +1,6 @@
+<section>
+  <div *ngFor="let book of booksForm.controls" [formGroup]="book">
+    <input type="text" placeholder="Автор" formControlName="author">
+    <input type="text" placeholder="Название книги" formControlName="bookName">
+  </div>
+</section>
