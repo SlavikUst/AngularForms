@@ -1,4 +1,4 @@
-<section ngForm #templateForm="ngForm">
+<section class="contact-form" ngForm #templateForm="ngForm">
   <input #name="ngModel" autocomplete="off" type="search" placeholder="Name" required minlength="5" [(ngModel)]="formData.name " name="name">
   <input autocomplete="off"  [disabled]="true" type="search" placeholder="Last Name" minlength="50" [(ngModel)]="formData.lastName" name="lastName">
   <input type="number" placeholder="Tel." [(ngModel)]="formData.tel" name="tel">

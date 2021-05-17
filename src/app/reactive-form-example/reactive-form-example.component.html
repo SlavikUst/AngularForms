@@ -1,6 +1,8 @@
 <section>
-  <div *ngFor="let book of booksForm.controls" [formGroup]="book">
+  <div class="book-list" *ngFor="let book of booksForm.controls" [formGroup]="book">
     <input type="text" placeholder="Автор" formControlName="author">
     <input type="text" placeholder="Название книги" formControlName="bookName">
   </div>
+
+  <button [disabled]="!booksForm.valid" (click)="addBook()">Добавить книгу</button>
 </section>

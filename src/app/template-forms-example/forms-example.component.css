@@ -2,3 +2,9 @@ input{
   display: block;
   margin: 10px 0;
 }
+
+.contact-form{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+}

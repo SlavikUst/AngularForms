@@ -9,12 +9,15 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class AppComponent implements OnInit{
   public  formData: FormGroup;
-  constructor(private fb: FormBuilder) {
-  }
+  constructor(private fb: FormBuilder) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.formData = this.fb.group({
       id: [null, []],
     });
+  }
+
+  public saveForm(): void {
+    console.log(this.formData.value);
   }
 }
