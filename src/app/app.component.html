@@ -1,12 +1,14 @@
 <h1>Template Form</h1>
-<form [formGroup]="formData">
+<form class="book-form" [formGroup]="formData" (ngSubmit)="saveForm()">
   <h2>ID</h2>
   <input placeholder="ID" type="text" formControlName="id">
   <h2>Общая информация</h2>
   <template-form-example [rootForm]="formData"></template-form-example>
   <h2>Книги:</h2>
   <reactive-form-example [rootForm]="formData"></reactive-form-example>
+
+  <button class="submit-button" type="submit">Сохранить</button>
 </form>
 
-{{formData.value | json}}
+<!--{{formData.value | json}}-->
 

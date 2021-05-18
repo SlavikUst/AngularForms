@@ -7,6 +7,7 @@ import {debounceTime} from 'rxjs/operators';
   templateUrl: './forms-example.component.html',
   styleUrls: ['./forms-example.component.css'],
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormsExampleComponent implements AfterViewInit {
   @Input()
@@ -20,13 +21,13 @@ export class FormsExampleComponent implements AfterViewInit {
   public ngAfterViewInit(): void {
     this.rootForm.addControl('contactInfo', this.templateForm.form);
 
-    this.templateForm.form.statusChanges.subscribe((status) => {
-      console.log(status);
-    });
+    // this.templateForm.form.statusChanges.subscribe((status) => {
+    //   console.log(status);
+    // });
 
-    this.templateForm.form.valueChanges.pipe(debounceTime(250)).subscribe((value) => {
-      console.log(value);
-    });
+    // this.templateForm.form.valueChanges.pipe(debounceTime(250)).subscribe((value) => {
+    //   console.log(value);
+    // });
   }
 
   public setData(): void {

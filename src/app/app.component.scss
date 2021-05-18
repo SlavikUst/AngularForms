@@ -7,3 +7,22 @@
     }
   }
 }
+
+.book-form{
+  &.ng-invalid{
+    .submit-button{
+      background-color: red;
+    }
+  }
+
+  &.ng-valid{
+    .submit-button{
+      background-color: green;
+    }
+  }
+
+  .submit-button{
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+}
