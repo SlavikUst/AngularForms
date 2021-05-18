@@ -3,4 +3,5 @@
     <input type="text" placeholder="Автор" formControlName="author">
     <input type="text" placeholder="Название книги" formControlName="bookName">
   </div>
+  <button [disabled]="!booksForm.valid" (click)="addBook()">Добавить книгу</button>
 </section>

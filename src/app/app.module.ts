@@ -6,6 +6,8 @@ import { MemoComponent } from './memo/memo.component';
 import { FormsExampleComponent } from './template-forms-example/forms-example.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ReactiveFormExampleComponent } from './reactive-form-example/reactive-form-example.component';
+import { NameValidationDirective } from './template-forms-example/name-validation.directive';
+import {ServerNameValidationDirective} from './template-forms-example/server-name-validation.directive';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { ReactiveFormExampleComponent } from './reactive-form-example/reactive-f
     MemoComponent,
     FormsExampleComponent,
     ReactiveFormExampleComponent,
+    NameValidationDirective,
+    ServerNameValidationDirective
   ],
   imports: [
     BrowserModule,

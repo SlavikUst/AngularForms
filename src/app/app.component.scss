@@ -2,7 +2,7 @@
   input{
     font-size: 2em;
 
-    &.ng-invalid{
+    &.ng-dirty.ng-invalid{
       border: 2px solid red;
     }
   }

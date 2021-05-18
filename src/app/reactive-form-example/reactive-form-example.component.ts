@@ -5,7 +5,6 @@ const bookFormValidation = (form: FormGroup) => {
   if (form.get('author')?.value && !form.get('bookName').value && form.get('bookName').disabled) {
     const titleControl = form.get('bookName');
 
-    titleControl.setValidators([Validators.required]);
     titleControl.enable();
     titleControl.updateValueAndValidity();
   }
@@ -24,8 +23,8 @@ class BooksFormConfig {
   public bookName;
 
   constructor() {
-    this.author = ['', []];
-    this.bookName = [{ value: '', disabled: true }, []];
+    this.author = ['', [Validators.required]];
+    this.bookName = [{ value: '', disabled: true }, [Validators.required]];
   }
 }
 
@@ -42,16 +41,24 @@ export class ReactiveFormExampleComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.booksForm = this.fb.array([
-      this.fb.group(
-        new BooksFormConfig(),
-        {
-          validators: bookFormValidation,
-        }
-      )
+      this.createFormGroup()
     ]);
 
     this.rootForm.addControl('bookForm', this.booksForm);
+  }
+
+  public addBook(): void {
+    this.booksForm.push(this.createFormGroup());
+  }
+
+  private createFormGroup(): FormGroup {
+    return this.fb.group(
+      new BooksFormConfig(),
+      {
+        validators: bookFormValidation,
+      }
+    )
   }
 }
